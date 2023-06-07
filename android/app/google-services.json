@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "811273257474",
+    "project_id": "nou-demo-host",
+    "storage_bucket": "nou-demo-host.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811273257474:android:111a7934fa523705555d1b",
+        "android_client_info": {
+          "package_name": "com.example.register_openu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811273257474-586l8rsbgbvh2nott6b3bd9nm6o6el96.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAPT9Qx0mkjkEefYlPsZg2SqCzrKbxjGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811273257474-586l8rsbgbvh2nott6b3bd9nm6o6el96.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

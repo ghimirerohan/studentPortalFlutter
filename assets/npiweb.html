@@ -1,0 +1,149 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Document</title>-->
+<!--</head>-->
+
+<!--<body>-->
+
+
+<!--<form action="https://gatewaysandbox.nepalpayment.com/Payment/Index" method="POST" id="form">-->
+<!--    <input value="" name="MerchantId" type="hidden">-->
+<!--    <input value="" name="MerchantName" type="hidden">-->
+<!--    <input value="" name="Amount" type="hidden">-->
+<!--    <input value="" name="TransactionRemarks" type="hidden">-->
+<!--    <input value="" name="MerchantTxnId" type="hidden">-->
+<!--    <input value="" name="ProcessID" type="hidden">-->
+<!--    <input value="" name="Signature" type="hidden">-->
+<!--    <input value="Pay now with eSewa ePay" type="submit">-->
+<!--</form>-->
+
+
+<!--</body>-->
+
+<!--<script type="text/javascript">-->
+
+<!--    function requestPayment(MerchantId, MerchantName, Amount, TransactionRemarks, MerchantTxnId, ProcessID, Signature) {-->
+<!--        oForm = document.forms['form'];-->
+<!--        oForm.elements['MerchantId'].value = MerchantId;-->
+<!--        oForm.elements['MerchantName'].value = MerchantName;-->
+<!--        oForm.elements['Amount'].value = Amount;-->
+<!--        oForm.elements['TransactionRemarks'].value = TransactionRemarks;-->
+<!--        oForm.elements['MerchantTxnId'].value = MerchantTxnId;-->
+<!--        oForm.elements['ProcessID'].value = ProcessID;-->
+<!--        oForm.elements['Signature'].value = Signature;-->
+
+<!--    }-->
+<!--</script>-->
+
+
+
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./logo.png">
+    <title>NPG Test</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        .error{
+			color: #ca121f;
+		}
+	</style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card px-5 py-2 m-4 box-shadow">
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
+                <img src="./logo.png" alt="" style="width: 90px;height: 75px;object-fit: contain;">
+                <h5 class="mt-3 header">NPS Payment</h5>
+            </div>
+        </div>
+        <form id="submitForm" action="https://gatewaysandbox.nepalpayment.com/Payment/Index" method="Post">
+            <div class="card p-3">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="MerchantId"> <i class="error">* </i>MerchantId</label>
+                            <input type="text" name="MerchantId" id="MerchantId" class="form-control" value="3203" required>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="MerchantName"> <i class="error">* </i> MName</label>
+                            <input type="text" name="MerchantName" id="MerchantName" class="form-control" value="tuopenapi" required>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="Amount"> <i class="error">* </i> Amount</label>
+                            <input type="text" name="Amount" id="Amount" class="form-control" value="10.0" required>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="InstrumentCode"> <i class="error">* </i> InstrumentCode</label>
+                            <input type="text" name="InstrumentCode" id="InstrumentCode" class="form-control" value="TMBANK" required>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="TransactionRemarks"> <i class="error">* </i> TransactionRemarks</label>
+                            <input type="text" name="TransactionRemarks" id="TransactionRemarks" class="form-control" value="75131001,Exam Fee" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-4 p-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="MerchantTxnId"> <i class="error">* </i> MerchantTxnId</label>
+                            <input type="text" name="MerchantTxnId" id="MerchantTxnId" class="form-control"  required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="ProcessId"> <i class="error">* </i> ProcessId</label>
+                            <input type="text" name="ProcessId" id="ProcessId" class="form-control" required>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="card mt-4 p-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="Signature"> <i class="error">* </i> Signature</label>
+                            <input type="text" name="Signature" id="Signature" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="submitBtn" type="submit" class="btn btn-success my-4 btn-block">Proceed for Payment</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</body>
+
+</html>
